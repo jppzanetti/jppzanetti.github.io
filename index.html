@@ -9,8 +9,21 @@
   
   <body>
 
-    <h1>João</h1>
-    <h2>[ʒuˈɐ̃w]</h2>
+    <a href="#" id="linker"><h1>João</h1></a>
+    <a href="#" id="linker"><h2>[ʒuˈɐ̃w]</h2></a>
 
   </body>
+
+  <script type="text/javascript">
+    const urls = [
+      "https://www.foo.com",
+      "https://www.bar.com",
+      "https://www.baz.com"
+    ];
+    var random = Math.floor(Math.random()*urls.length);
+    var links = document.getElementsByTagName("a")
+    for (let i = 0; i < links.length; i++) {
+      links[i].href = urls[random];
+    }
+  </script>
 </html>
